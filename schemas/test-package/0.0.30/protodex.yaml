@@ -1,0 +1,17 @@
+package:
+    name: "test-package"
+    description: ""
+files:
+    exclude: []
+    base_dir: .
+gen:
+    languages:
+        - name: go
+          output_dir: ./gen/go
+          options: {}
+          plugins: []
+deps:
+    - name: google/protobuf
+      type: google-well-known
+      source: ""
+plugins: []
