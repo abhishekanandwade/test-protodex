@@ -1,0 +1,34 @@
+package:
+    name: "test-package"
+    description: ""
+files:
+    exclude: []
+    base_dir: .
+gen:
+    languages:
+        - name: go
+          output_dir: ./gen/go
+          options: {}
+          plugins: []
+deps:
+    - name: google/protobuf
+      type: google-well-known
+      source: ""
+plugins: []
+routes:
+  - name: CreateMessageApplication
+    method: POST
+    path: /message-applications
+    handler: CreateMessageApplicationHandler
+  - name: UpdateMessageApplication
+    method: PUT
+    path: /message-applications/:application-id
+    handler: UpdateMessageApplicationHandler
+  - name: FetchMessageApplication
+    method: GET
+    path: /message-applications/:application-id
+    handler: FetchMessageApplicationHandler
+  - name: DeleteMessageApplication
+    method: DELETE
+    path: /message-applications/:application-id
+    handler: DeleteMessageApplicationHandler
