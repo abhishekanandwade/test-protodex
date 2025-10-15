@@ -1,0 +1,32 @@
+package:
+    name: "message-gateway-management-back-end"
+    description: ""
+files:
+    exclude: []
+    base_dir: .
+gen:
+    languages:
+        - name: go
+          output_dir: ./gen/go
+          options: {}
+          plugins: []
+deps:
+    - name: google/protobuf
+      type: google-well-known
+      source: ""
+plugins: []
+routes:
+  - name: CreateMessageGateway
+    method: POST
+    path: /message-gateway
+    request:
+      type: CreateMessageGatewayRequest
+    response:
+      type: CreateMessageGatewayResponse
+  - name: UpdateMessageGateway
+    method: PUT
+    path: /message-gateway/{id}
+    request:
+      type: UpdateMessageGatewayRequest
+    response:
+      type: UpdateMessageGatewayResponse
